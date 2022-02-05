@@ -5,16 +5,25 @@ import Gameboard from "./components/Gameboard";
 import { nanoid } from "nanoid";
 
 function App() {
+
+  const [dice, setDice] = React.useState(() => allNewDice());
+  const [tenzies, setTenzies] = React.useState(false);
+  const [rollCount, setRollCount] = React.useState(0);
+  const [rolls, setRolls] = React.useState(() => retrieveDataFromStorage());
+
+
   function retrieveDataFromStorage() {
     let data = [];
     if (!localStorage.getItem("gameData")) {
-      updateDataToStorage();
+     return data;
     } else {
-      let result = localStorage.getItem("gameData");
-      data = JSON.parse(`${result}`);
+      const retrieveData = localStorage.getItem("gameData");
+      console.log(retrieveData)
+      data = JSON.parse(retrieveData);
+      return data;
     }
-    return data;
   }
+
 
   function updateDataToStorage() {
     localStorage.setItem("gameData", JSON.stringify(rolls));
@@ -36,11 +45,6 @@ function App() {
     }
     return diceArray;
   }
-
-  const [dice, setDice] = React.useState(() => allNewDice());
-  const [tenzies, setTenzies] = React.useState(false);
-  const [rollCount, setRollCount] = React.useState(0);
-  const [rolls, setRolls] = React.useState(retrieveDataFromStorage());
 
   React.useEffect(() => {
     setTenzies(
