@@ -1,4 +1,4 @@
 export default function Footer() {
-    return <footer>&copy; Adeleye Adeyemi 2022</footer>;
+    return <footer>Made with React by Adeleye Adeyemi &copy;  2022</footer>;
   }
   
