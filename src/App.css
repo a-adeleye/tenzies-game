@@ -138,6 +138,21 @@ button:active {
   overflow: hidden;
 }
 
+.tenzies-trophy {
+  animation: swirl-in-zoomin 1s ease 0s infinite normal none;
+}
+
+@keyframes swirl-in-zoomin {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
 .scoreboard {
   display: flex;
   width: 10em;
@@ -169,7 +184,7 @@ button:active {
   overflow: hidden;
 }
 
-.history ul {
+.history ol {
   padding: 0 2em;
   overflow-y: scroll;
   overflow-x: hidden;

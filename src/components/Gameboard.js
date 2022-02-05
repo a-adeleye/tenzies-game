@@ -103,7 +103,7 @@ function Gameboard(props) {
         <button onClick={props.newDice}>Roll &#9865;</button>
       </div>
       <EndGame restart={props.restartGame} tenzies={props.tenzies} />
-      <History show={showHistory} closeHistory={toggleHistory}/>
+      <History show={showHistory} rolls={props.rolls} closeHistory={toggleHistory}/>
       <Footer />
     </main>
   );

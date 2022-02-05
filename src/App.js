@@ -96,6 +96,7 @@ function App() {
         newDice={newDice}
         restartGame={restartGame}
         tenzies={tenzies}
+        rolls={rolls}
       />
     </div>
   );

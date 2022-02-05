@@ -1,4 +1,5 @@
 import React from "react"
+import trophy from "../trophy.png"
 
 export default function EndGame(props) {
 
@@ -7,6 +8,7 @@ export default function EndGame(props) {
     return(
         <div className="tenzies" style={style}>
             <h1>Tenzies!!! 😋</h1>
+            <img className="tenzies-trophy" src={trophy}/> 
             <button onClick={props.restart}>Restart Game</button>
         </div>
 
