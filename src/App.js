@@ -5,21 +5,19 @@ import Gameboard from "./components/Gameboard";
 import { nanoid } from "nanoid";
 
 function App() {
-
   const [dice, setDice] = React.useState(() => allNewDice());
   const [tenzies, setTenzies] = React.useState(false);
   const [rollCount, setRollCount] = React.useState(0);
   const [rolls, setRolls] = React.useState(() => retrieveDataFromStorage());
 
-
   function retrieveDataFromStorage() {
     let data = [];
     if (!localStorage.getItem("gameData")) {
-     return data;
+      return data;
     } else {
       const retrieveData = localStorage.getItem("gameData");
-     // data = JSON.parse(retrieveData);
-      return retrieveData;
+      data = JSON.parse(retrieveData);
+      return data;
     }
   }
 
