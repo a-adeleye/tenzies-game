@@ -68,6 +68,7 @@ function App() {
   const bestRoll = rolls.length < 1 ? "" : Math.min(...rolls);
   const highestRoll = rolls.length < 1 ? "" : Math.max(...rolls);
   const gamesPlayed = rolls.length;
+  const gameRoll = rollCount;
 
   function newDice() {
     setDice(dice.map((die) => (die.isHeld ? die : rollDice())));
@@ -87,6 +88,7 @@ function App() {
         leastRoll={bestRoll}
         highestRoll={highestRoll}
         count={gamesPlayed}
+        gameRoll={gameRoll}
       />
       <Gameboard
         dice={dice}
