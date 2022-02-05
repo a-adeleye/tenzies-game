@@ -19,7 +19,7 @@ function App() {
     } else {
       const retrieveData = localStorage.getItem("gameData");
       console.log(retrieveData)
-      data = JSON.parse(retrieveData);
+     // data = JSON.parse(retrieveData);
       return retrieveData;
     }
   }
