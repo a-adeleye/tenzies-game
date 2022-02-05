@@ -20,10 +20,12 @@ function App() {
       const retrieveData = localStorage.getItem("gameData");
       console.log(retrieveData)
       data = JSON.parse(retrieveData);
-      return data;
+      return retrieveData;
     }
   }
 
+  const yuyu = {a: "b"};
+  console.log(JSON.stringify([1, 'false', false]))
 
   function updateDataToStorage() {
     localStorage.setItem("gameData", JSON.stringify(rolls));
