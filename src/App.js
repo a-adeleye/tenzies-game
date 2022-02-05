@@ -11,7 +11,7 @@ function App() {
       updateDataToStorage();
     } else {
       let result = localStorage.getItem("gameData");
-      data = JSON.parse(result);
+      data = JSON.parse(`${result}`);
     }
     return data;
   }
