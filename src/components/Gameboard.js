@@ -1,8 +1,10 @@
 import React from "react";
 import { Die1, Die2, Die3, Die4, Die5, Die6 } from "./Dice";
 import EndGame from "./EndGame";
+import History from "./History";
 import Confetti from "react-confetti";
 import Footer from "./Footer";
+
 
 function Instruction() {
   return (
@@ -85,15 +87,23 @@ function Gameboard(props) {
     <div className="dice">{props.dice.map((die) => renderDie(die))}</div>
   );
 
+  const [showHistory, setShowHistory] = React.useState(false);
+
+  function toggleHistory(){
+    setShowHistory(prev => prev = !prev)
+  }
+
   return (
     <main>
       <div className="box">
+      <button className="historyBtn" onClick={toggleHistory}>Game history &#9871;</button>
         {props.tenzies && <Confetti />}
         <Instruction />
         {dieElements}
         <button onClick={props.newDice}>Roll &#9865;</button>
       </div>
       <EndGame restart={props.restartGame} tenzies={props.tenzies} />
+      <History show={showHistory} closeHistory={toggleHistory}/>
       <Footer />
     </main>
   );

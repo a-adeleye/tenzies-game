@@ -35,7 +35,7 @@ main {
 
 .box {
   height: 25em;
-  padding: 2em 1em;
+  padding: 1em 1em;
   background-color: #3d302b;
   justify-content: space-between;
   border: 0.7em solid #bdc3c7;
@@ -157,6 +157,46 @@ button:active {
   font-weight: 700;
 }
 
+.history {
+  position: absolute;
+  display: flex;
+  width: 15.5em;
+  background-color: #3d302b;
+  border-radius: 0.6em;
+  font-size: 1.6em;
+  transition: 0.3s;
+  margin-bottom: 1.65em;
+  overflow: hidden;
+}
+
+.history ul {
+  padding: 0 2em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #9d918b;
+}
+
+.history ul li {
+  margin-bottom: 0.4em;
+}
+
+.historyBtn {
+  font-weight: normal;
+  font-size: 1em;
+  background-color: #9d918b;
+  color: #000000;
+  padding: 0.2em 0.4em;
+  align-self: flex-end;
+}
+
+.closeBtn {
+  color: #9d918b;
+  font-size: 0.8em;
+  position: inherit;
+  inset: 0.2em 1em 0 auto;
+  cursor: pointer;
+}
+
 footer {
   height: 3em;
   position: fixed;
@@ -168,12 +208,12 @@ footer {
   justify-content: center;
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 50em) {
   header {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    min-height: 150px;
+    min-height: 12em;
   }
 
   main {
