@@ -42,8 +42,6 @@ function App() {
   const [rollCount, setRollCount] = React.useState(0);
   const [rolls, setRolls] = React.useState(retrieveDataFromStorage());
 
-  retrieveDataFromStorage();
-
   React.useEffect(() => {
     setTenzies(
       dice.every((die) => die.isHeld === true) &&
