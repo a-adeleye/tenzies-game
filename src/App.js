@@ -18,14 +18,10 @@ function App() {
      return data;
     } else {
       const retrieveData = localStorage.getItem("gameData");
-      console.log(retrieveData)
      // data = JSON.parse(retrieveData);
       return retrieveData;
     }
   }
-
-  const yuyu = {a: "b"};
-  console.log(JSON.stringify([1, 'false', false]))
 
   function updateDataToStorage() {
     localStorage.setItem("gameData", JSON.stringify(rolls));
