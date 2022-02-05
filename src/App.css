@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  height: 11vh;
+  background-color: #2a2c2b;
+  color: #9d918b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  height: 88vh;
+  background-color: #443935;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box,
+.tenzies {
+  width: 25em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 1em;
+  transition: 2s;
+}
+
+.box {
+  height: 25em;
+  padding: 2em 1em;
+  background-color: #3d302b;
+  justify-content: space-between;
+  border: 0.7em solid #bdc3c7;
+}
+
+.held {
+  background-color: #e4b16e;
+}
+
+.instruction {
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.dice {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.die1,
+.die2,
+.die3,
+.die4,
+.die5,
+.die6 {
+  width: 3em;
+  height: 3em;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.dot,
+.die5:after {
+  width: 0.5em;
+  height: 0.5em;
+  display: block;
+  border-radius: 50%;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.die1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.die2,
+.die3 {
+  display: grid;
+  padding: 0.5em;
+}
+
+.die2 {
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+}
+
+.die3 {
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.3em;
+}
+
+.die4,
+.die5,
+.die6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.die5:after {
+  content: "";
+  position: absolute;
+}
+
+button {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 700;
+  background: #ff1b6b;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: inset 0 0 1em #bd0f4c;
+}
+
+.tenzies {
+  position: absolute;
+  background-color: #e4b16e;
+  justify-content: center;
+  gap: 2em;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.scoreboard {
+  display: flex;
+  width: 10em;
+  gap: 0.6em;
+}
+
+.number {
+  min-width: 2em;
+  height: 2em;
+  padding: 0.2em 0.3em;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4b16e;
+  color: #000000;
+  font-weight: 700;
+}
+
+footer {
+  height: 3em;
+  position: fixed;
+  inset: auto 0 0 0;
+  background-color: #2a2c2b;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 590px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    min-height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+
+  main {
+    align-items: flex-start;
+    padding: 2em;
+  }
+
+  .scoreboard {
+    justify-content: space-between;
   }
 }
