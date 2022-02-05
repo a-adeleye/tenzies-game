@@ -10,7 +10,8 @@ function App() {
     if (!localStorage.getItem("gameData")) {
       updateDataToStorage();
     } else {
-      data = JSON.parse(localStorage.getItem("gameData"));
+      let result = localStorage.getItem("gameData");
+      data = JSON.parse(result);
     }
     return data;
   }
