@@ -2,14 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Roll until all dice are the same. Click each die to freeze it as its current value between rolls.
 
-In the project directory, you can run:
+<div align="center"><img src="./src/Screenshot_App.png" alt="app screenshot" width="1000" /></div>
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Live App here](https://a-adeleye.github.io/tenzies-game/).
